@@ -1810,9 +1810,9 @@ Function name MUST start with a lower letter and MUST be camelcase.
 <pre lang=php>
 &lt;?php
 
-getWelcomeMessage();
-getWelcomeMessage();
-getWelcomeMessage();
+GetWelcomeMessage();
+Get_Welcome_Message();
+getWelcome_Message();
 
 // EOF
  
