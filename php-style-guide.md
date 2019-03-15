@@ -1766,7 +1766,7 @@ echo 'Hello, World! He\'s watching movies and she\'s reading books.';
 
 This section describes the format for function names, calls, arguments and declarations.
 
-1. [**Function name**](#1-function-name) MUST start with a capital letter and MUST be camelcase
+1. [**Function name**](#1-function-name) MUST start with a lower letter and MUST be camelcase
 	* e.g. `function getWelcomeMessage() {`
 2. [**Function prefix**](#2-function-prefix) MUST start with verb
 	* e.g. `get_`, `add_`, `update_`, `delete_`, `convert_`, etc.
@@ -1803,7 +1803,7 @@ This section describes the format for function names, calls, arguments and decla
 
 ### 1. Function Name
 
-Function name MUST start with a capital letter and MUST be camelcase.
+Function name MUST start with a lower letter and MUST be camelcase.
 
 #### &#10006; Incorrect
 
@@ -1818,7 +1818,7 @@ getWelcomeMessage();
  
 </pre>
 
-&#8627; Incorrect because the function names are not start with a capital letter and MUST be camelcase.
+&#8627; Incorrect because the function names are not start with a lower letter and MUST be camelcase.
 
 <pre lang=php>
 &lt;?php
