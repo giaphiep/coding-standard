@@ -167,14 +167,14 @@ Open tag MUST be on its own line and MUST be followed by a blank line.
 #### &#10006; Incorrect
 
 <pre lang=php>
-&lt;?php print_welcome_message();
+&lt;?php printWelcomeMessage();
 </pre>
 
 &#8627; Incorrect because `<?php` is not on its own line.
 
 <pre lang=php>
 &lt;?php
-print_welcome_message();
+printWelcomeMessage();
 </pre>
 
 &#8627; Incorrect because `<?php` is not followed by a blank line.
@@ -184,7 +184,7 @@ print_welcome_message();
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 </pre>
 
 &#9650; [PHP Tags](#3-php-tags)
@@ -200,7 +200,7 @@ Close tag MUST NOT be used in PHP files.
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 
 ?&gt;
 </pre>
@@ -212,7 +212,7 @@ print_welcome_message();
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 </pre>
 
 &#9650; [PHP Tags](#3-php-tags)
@@ -228,7 +228,7 @@ Open/close tag MUST be on one line in PHP/HTML files.
 <pre lang=html>
 &lt;div&gt;
 	&lt;h1&gt;&lt;?php
-	print_welcome_message();
+	printWelcomeMessage();
 	?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
@@ -239,7 +239,7 @@ Open/close tag MUST be on one line in PHP/HTML files.
 
 <pre lang=html>
 &lt;div&gt;
-	&lt;h1&gt;&lt;?php print_welcome_message(); ?&gt;&lt;/h1&gt;
+	&lt;h1&gt;&lt;?php printWelcomeMessage(); ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
 
@@ -256,7 +256,7 @@ Short open tag MUST NOT be used.
 <pre lang=php>
 &lt;?
 
-print_welcome_message();
+printWelcomeMessage();
 </pre>
 
 &#8627; Incorrect because `<?` was used instead of `<?php`.
@@ -266,7 +266,7 @@ print_welcome_message();
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 </pre>
 
 &#9650; [PHP Tags](#3-php-tags)
@@ -281,7 +281,7 @@ Short echo tag SHOULD be used in PHP/HTML files.
 
 <pre lang=html>
 &lt;div&gt;
-	&lt;p&gt;&lt;?php echo get_welcome_message(); ?&gt;&lt;/p&gt;
+	&lt;p&gt;&lt;?php echo getWelcomeMessage(); ?&gt;&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -291,7 +291,7 @@ Short echo tag SHOULD be used in PHP/HTML files.
 
 <pre lang=html>
 &lt;div&gt;
-	&lt;p&gt;&lt;?= get_welcome_message(); ?&gt;&lt;/p&gt;
+	&lt;p&gt;&lt;?= getWelcomeMessage(); ?&gt;&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -317,7 +317,7 @@ End-of-file comment:
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 </pre>
 
 &#8627; Incorrect because `// EOF` is missing.
@@ -325,7 +325,7 @@ print_welcome_message();
 <pre lang=php>
 &lt;?php
 
-print_welcome_message(); // EOF
+printWelcomeMessage(); // EOF
 </pre>
 
 &#8627; Incorrect because `// EOF` is not on its own line.
@@ -333,7 +333,7 @@ print_welcome_message(); // EOF
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 // EOF
 </pre>
 
@@ -344,7 +344,7 @@ print_welcome_message();
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -380,7 +380,7 @@ Namespace declaration MUST be the first statement and MUST be followed by a blan
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 
 namespace MyCompany;
 
@@ -394,7 +394,7 @@ namespace MyCompany;
 &lt;?php
 
 namespace MyCompany;
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -409,7 +409,7 @@ print_welcome_message();
 
 namespace MyCompany;
 
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -516,7 +516,7 @@ namespace MyCompany\Model {
 }
 
 namespace MyCompany\View {
-	$welcome_message = MyCompany\View\get_welcome_message();
+	$welcome_message = MyCompany\View\getWelcomeMessage();
 }
 
 // EOF
@@ -535,7 +535,7 @@ namespace MyCompany\Model {
 }
 
 namespace MyCompany\View {
-	$welcome_message = __NAMESPACE__ . '\\' . get_welcome_message();
+	$welcome_message = __NAMESPACE__ . '\\' . getWelcomeMessage();
 }
 
 // EOF
@@ -721,7 +721,7 @@ Comment MUST be on their own line.
 <pre lang=php>
 &lt;?php
 
-print_welcome_message(); // Prints welcome message
+printWelcomeMessage(); // Prints welcome message
 
 // EOF
  
@@ -735,7 +735,7 @@ print_welcome_message(); // Prints welcome message
 &lt;?php
 
 // Prints welcome message
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -1136,7 +1136,7 @@ Line indentation MUST be accomplished using tabs.
 <pre lang=php>
 &lt;?php
 
-function print_welcome_message() {
+function printWelcomeMessage() {
     echo WELCOME_MESSAGE;
 }
 
@@ -1151,7 +1151,7 @@ function print_welcome_message() {
 <pre lang=php>
 &lt;?php
 
-function print_welcome_message() {
+function printWelcomeMessage() {
 	echo WELCOME_MESSAGE;
 }
 
@@ -1295,7 +1295,7 @@ Trailing whitespace MUST NOT be present after statements or serial comma break o
 
 $quotes_exist = false;  
 
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -1324,7 +1324,7 @@ $my_movies = array(
 
 $quotes_exist = false;
   
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -1339,7 +1339,7 @@ print_welcome_message();
 
 $quotes_exist = false;
 
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -1545,21 +1545,21 @@ Statements MUST be placed on their own line and MUST end with a semicolon.
 <pre lang=php>
 &lt;?php
 
-$quotes_exist = false; print_welcome_message();
+$quotes_exist = false; printWelcomeMessage();
 
 // EOF
  
 </pre>
 
-&#8627; Incorrect because `$quotes_exist = false;` and `print_welcome_message();` are on one line.
+&#8627; Incorrect because `$quotes_exist = false;` and `printWelcomeMessage();` are on one line.
 
 <pre lang=html>
 &lt;div&gt;
-	&lt;h1&gt;&lt;?= print_welcome_message() ?&gt;&lt;/h1&gt;
+	&lt;h1&gt;&lt;?= printWelcomeMessage() ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
 
-&#8627; Incorrect because `print_welcome_message()` is missing a semicolon.
+&#8627; Incorrect because `printWelcomeMessage()` is missing a semicolon.
 
 #### &#10004; Correct
 
@@ -1567,7 +1567,7 @@ $quotes_exist = false; print_welcome_message();
 &lt;?php
 
 $quotes_exist = false;
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -1575,7 +1575,7 @@ print_welcome_message();
 
 <pre lang=html>
 &lt;div&gt;
-	&lt;h1&gt;&lt;?= print_welcome_message() ?&gt;&lt;/h1&gt;
+	&lt;h1&gt;&lt;?= printWelcomeMessage() ?&gt;&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1766,8 +1766,8 @@ echo 'Hello, World! He\'s watching movies and she\'s reading books.';
 
 This section describes the format for function names, calls, arguments and declarations.
 
-1. [**Function name**](#1-function-name) MUST be all lowercase and words MUST be separated by an underscore
-	* e.g. `function welcome_message() {`
+1. [**Function name**](#1-function-name) MUST start with a capital letter and MUST be camelcase
+	* e.g. `function getWelcomeMessage() {`
 2. [**Function prefix**](#2-function-prefix) MUST start with verb
 	* e.g. `get_`, `add_`, `update_`, `delete_`, `convert_`, etc.
 3. [**Function call**](#3-function-call) MUST NOT have a space between function name and open parenthesis
@@ -1803,22 +1803,22 @@ This section describes the format for function names, calls, arguments and decla
 
 ### 1. Function Name
 
-Function name MUST be all lowercase and words MUST be separated by an underscore.
+Function name MUST start with a capital letter and MUST be camelcase.
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
 
-get_Welcome_Message();
-Get_Welcome_Message();
-GET_WELCOME_MESSAGE();
+getWelcomeMessage();
+getWelcomeMessage();
+getWelcomeMessage();
 
 // EOF
  
 </pre>
 
-&#8627; Incorrect because the function names are not all lowercase.
+&#8627; Incorrect because the function names are not start with a capital letter and MUST be camelcase.
 
 <pre lang=php>
 &lt;?php
@@ -1836,7 +1836,7 @@ getwelcomemessage();
 <pre lang=php>
 &lt;?php
 
-get_welcome_message();
+getWelcomeMessage();
 
 // EOF
  
@@ -1855,9 +1855,9 @@ Function prefix MUST start with verb.
 <pre lang=php>
 &lt;?php
 
-active_users();
-network_location($location1, $location2);
-widget_form($id);
+activeUsers();
+networkLocation($location1, $location2);
+widgetForm($id);
 
 // EOF
  
@@ -1870,9 +1870,9 @@ widget_form($id);
 <pre lang=php>
 &lt;?php
 
-get_active_users();
-move_network_location($location1, $location2);
-delete_widget_form($id);
+getActiveUsers();
+moveNetworkLocation($location1, $location2);
+deleteWidgetForm($id);
 
 // EOF
  
@@ -1891,20 +1891,20 @@ Function call MUST NOT have a space between function name and open parenthesis.
 <pre lang=php>
 &lt;?php
 
-print_welcome_message ();
+printWelcomeMessage ();
 
 // EOF
  
 </pre>
 
-&#8627; Incorrect because there is a space between `get_welcome_message` and `()`.
+&#8627; Incorrect because there is a space between `getWelcomeMessage` and `()`.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
 
-print_welcome_message();
+printWelcomeMessage();
 
 // EOF
  
@@ -1933,7 +1933,7 @@ Function arguments:
 <pre lang=php>
 &lt;?php
 
-my_function($arg1 , $arg2 , $arg3);
+myFunction($arg1 , $arg2 , $arg3);
 
 // EOF
  
@@ -1944,7 +1944,7 @@ my_function($arg1 , $arg2 , $arg3);
 <pre lang=php>
 &lt;?php
 
-my_function($arg1,$arg2,$arg3);
+myFunction($arg1,$arg2,$arg3);
 
 // EOF
  
@@ -1955,7 +1955,7 @@ my_function($arg1,$arg2,$arg3);
 <pre lang=php>
 &lt;?php
 
-my_other_function($arg1_with_a_really_long_name,
+myOtherFunction($arg1_with_a_really_long_name,
 	$arg2_also_has_a_long_name,
 	$arg3
 );
@@ -1969,7 +1969,7 @@ my_other_function($arg1_with_a_really_long_name,
 <pre lang=php>
 &lt;?php
 
-my_other_function(
+myOtherFunction(
 $arg1_with_a_really_long_name,
 $arg2_also_has_a_long_name,
 $arg3
@@ -1984,7 +1984,7 @@ $arg3
 <pre lang=php>
 &lt;?php
 
-function get_objects($type, $order = 'asc', $limit) {
+function getObjects($type, $order = 'asc', $limit) {
 	// ...
 }
 
@@ -1997,7 +1997,7 @@ function get_objects($type, $order = 'asc', $limit) {
 <pre lang=php>
 &lt;?php
 
-function get_objects($limit, $order, $type) {
+function getObjects($limit, $order, $type) {
 	// ...
 }
 
@@ -2010,7 +2010,7 @@ function get_objects($limit, $order, $type) {
 <pre lang=php>
 &lt;?php
 
-function get_objects($type, $order = true, $limit = 100) {
+function getObjects($type, $order = true, $limit = 100) {
 	// ...
 }
 
@@ -2023,7 +2023,7 @@ function get_objects($type, $order = true, $limit = 100) {
 <pre lang=php>
 &lt;?php
 
-function add_users_to_office($users, $office) {
+function addUsersToOffice($users, $office) {
 	// ...
 }
 
@@ -2038,19 +2038,19 @@ function add_users_to_office($users, $office) {
 <pre lang=php>
 &lt;?php
 
-my_function($arg1, $arg2, $arg3);
+myFunction($arg1, $arg2, $arg3);
 
-my_other_function(
+myOtherFunction(
 	$arg1_with_a_really_long_name,
 	$arg2_also_has_a_long_name,
 	$arg3
 );
 
-function get_objects($type, $order = 'asc', $limit = 100) {
+function getObjects($type, $order = 'asc', $limit = 100) {
 	// ...
 }
 
-function add_users_to_office(array $users, Office $office) {
+function addUsersToOffice(array $users, Office $office) {
 	// ...
 }
 
@@ -2079,7 +2079,7 @@ Function declaration MUST be documented using [phpDocumentor](http://phpdoc.org/
 <pre lang=php>
 &lt;?php
 
-function my_function($id, $type, $width, $height) {
+function myFunction($id, $type, $width, $height) {
 	// ...
 	return $Photo;
 }
@@ -2088,7 +2088,7 @@ function my_function($id, $type, $width, $height) {
  
 </pre>
 
-&#8627; Incorrect because `my_function` is not documented.
+&#8627; Incorrect because `myFunction` is not documented.
 
 #### &#10004; Correct
 
@@ -2111,7 +2111,7 @@ function my_function($id, $type, $width, $height) {
  * @param int $height Photo height in px
  * @return object Photo
  */
-function my_function($id, $type, $width, $height) {
+function myFunction($id, $type, $width, $height) {
 	// ...
 	return $Photo;
 }
@@ -2137,7 +2137,7 @@ Function return:
 <pre lang=php>
 &lt;?php
 
-function get_object() {
+function getObject() {
 	$var = false;
 	if($expr1) {
 		// ...
@@ -2153,12 +2153,12 @@ function get_object() {
  
 </pre>
 
-&#8627; Incorrect because `get_object` does not return as early as possible.
+&#8627; Incorrect because `getObject` does not return as early as possible.
 
 <pre lang=php>
 &lt;?php
 
-function get_movies() {
+function getMovies() {
 	// ...
 
 	return $movies;
@@ -2173,7 +2173,7 @@ function get_movies() {
 <pre lang=php>
 &lt;?php
 
-function get_movies() {
+function getMovies() {
 	$movies = array();
 	// ...
 	return $movies;
@@ -2190,7 +2190,7 @@ function get_movies() {
 <pre lang=php>
 &lt;?php
 
-function get_object() {
+function getObject() {
 	$var = false;
 	if (!$expr1) {
 		return $var;
@@ -2210,7 +2210,7 @@ function get_object() {
 <pre lang=php>
 &lt;?php
 
-function get_movies() {
+function getMovies() {
 	$movies = array();
 	// ...
 
